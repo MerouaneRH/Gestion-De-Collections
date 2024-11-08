@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = ['django_bootstrap5',
     'collec_management.apps.CollecManagementConfig', #c'est ajouté après la création de l'application
     'django.contrib.admin',
     'django.contrib.auth',

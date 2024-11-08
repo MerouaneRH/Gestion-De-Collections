@@ -1,21 +1,26 @@
-<h1>Nouvelle Collection</h1>
+{% extends './base.html' %}
 
-<form method="POST">
-    {% csrf_token %}
-    <table>
-        <tr>
-            <td>{{ form.title.label }}</td>
-            <td>{{ form.title }}</td>
-        </tr>
-        <tr>
-            <td>{{ form.description.label }}</td>
-            <td>{{ form.description }}</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="Nouvelle Collection">
-            </td>
-        </tr>
-    </table>
-</form>
-<p><a href ="{% url 'collections_list' %}">Retour &agrave; la liste </a></p>
+{% block title %}Ajouter une Nouvelle Collection{% endblock %}
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <h1 class="mb-4 text-center">Ajouter une Nouvelle Collection</h1>
+        <form method="post" class="card p-4 shadow-sm">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_title" class="form-label">Titre</label>
+                {{ form.title }}
+            </div>
+            <div class="mb-3">
+                <label for="id_description" class="form-label">Description</label>
+                {{ form.description }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Ajouter</button>
+        </form>
+        <a href="{% url 'collections_list' %}" class="btn btn-secondary w-100 mt-3">Retour à la liste des collections</a>
+    </div>
+    <!--Bootstrap modifié -->
+</div>
+{% endblock %}
+

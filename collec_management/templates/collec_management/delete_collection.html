@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends './base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supprimer une Collection</title>
-</head>
+{% block title %}Supprimer une Collection{% endblock %}
 
-<body>
-    <h1>Supprimer une Collection</h1>
-    <p>Es-tu sûr de vouloir supprimer la collection "{{collection.title}}" ? Cette action est irréversible.</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Confirmer la suppression</button>
-    </form>
-    <a href="{% url 'collections_list' %}"></a>
-    <p><a href ="{% url 'collections_list' %}">Retour &agrave; la liste </a></p>
-</body>
+{% block content %}
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card shadow-sm p-4 col-md-8 col-lg-6">
+        <h2 class="card-title text-center text-danger mb-4">Supprimer une Collection</h2>
+        <div class="card-body">
+            <p class="card-text text-center">Es-tu sûr de vouloir supprimer la collection "<strong>{{ collection.title }}</strong>" ? Cette action est irréversible.</p>
+            <form method="post" class="text-center">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+                <a href="{% url 'collections_list' %}" class="btn btn-secondary w-100 mt-3">Retour à la liste des collections</a>
+            </form>
+        </div>
+    </div>
+    <!--Bootstrap modifié -->
+</div>
 
-</html>
+{% endblock %}

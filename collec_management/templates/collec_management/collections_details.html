@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails de la Collection</title>
-</head>
-<body>
-    <h1>{{ collection.title }}</h1>
-    <p><strong>Description :</strong> {{ collection.description }}</p>
-    <p><strong>Date de création :</strong> {{ collection.date }}</p>
-    <a href="{% url 'collections_list' %}">Retour &agrave; la liste des collections</a>
-</body>
-</html>
+{% extends './base.html' %}
+
+{% block title %}Détails de la collection{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card shadow-sm p-4 col-md-8 col-lg-6">
+        <h2 class="card-title text-center mb-4">{{ collection.title }}</h2>
+        <div class="card-body">
+            <p class="card-text"><strong>Description :</strong> {{ collection.description }}</p>
+            <p class="card-text"><strong>Date de Création :</strong> {{ collection.date }}</p>
+        </div>
+        <div class="text-center mt-3">
+            <a href="{% url 'collections_list' %}" class="btn btn-secondary w-100 mt-3">Retour à la liste des collections</a>
+        </div>
+    </div>
+    <!--Bootstrap modifié -->
+</div>
+{% endblock %}
+
