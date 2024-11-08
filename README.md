@@ -1,4 +1,3 @@
-
 # Noms et Prénoms avec adresses mails des membres du groupe:
 - TOUBAL Rabah : rabah.toubal@etu.univ-orleans.fr
 - GUILLARD Joan: joan.guillard@etu.univ-orleans.fr
@@ -20,3 +19,21 @@
 ## Commandes Question 02:
 
 1. `python manage.py runserver 0.0.0.0:8000 &`
+
+## Commandes Question 03:
+
+1. `python manage.py makemigrations`
+
+2. `python manage.py sqlmigrate collec_management 0001`
+
+3.  `python manage.py migrate`
+
+4. `python manage.py shell`
+
+5. `from collec_management.models import Collec`
+
+6. `from django.utils import timezone`
+
+7. `c = Collec(title="test", description="Ceci est un test",date=timezone.now())`
+
+8. `c.save()`
