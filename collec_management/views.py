@@ -9,3 +9,7 @@ def about(request):
 def collections_details(request, collection_id):
     collection = get_object_or_404(Collec, pk=collection_id)
     return render(request, 'collec_management/collections_details.html', {'collection': collection})
+
+def collections_list(request):
+    collections = Collec.objects.all().order_by('-date')
+    return render(request, 'collec_management/collections_list.html', {'collections': collections})
