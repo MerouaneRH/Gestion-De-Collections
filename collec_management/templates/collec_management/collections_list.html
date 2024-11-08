@@ -10,7 +10,7 @@
       <tr>
         <th>Titre</th>
         <th>Date de création</th>
-        <th>Actions</th>
+        <th colspan="2">Actions</th>
       </tr>
       {% for collection in collections %}
       <tr>
@@ -23,6 +23,11 @@
         <td>
           <a href="{% url 'collections_details' collection.id %}">
             Voir plus de détails
+          </a>
+        </td>
+        <td>
+          <a href="{% url 'delete_collection' collection.id %}">
+            Supprimer
           </a>
         </td>
       </tr>

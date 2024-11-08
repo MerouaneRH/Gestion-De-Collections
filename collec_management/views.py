@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,redirect
 from collec_management.models import Collec
 from collec_management.forms import CollecForm
 from django.http import HttpResponse, HttpResponseRedirect , Http404
@@ -30,3 +30,11 @@ def new_collection(request):
         form = CollecForm()  # Formulaire vide
 
     return render(request, "collec_management/add_collection.html", {"form": form})
+
+def delete_collection(request, collection_id):
+    collection = get_object_or_404(Collec, id=collection_id)
+    if request.method == 'POST': 
+        collection.delete()
+        return redirect('collections_list') # Redirige vers la liste des collections après suppression 
+    
+    return render(request, 'collec_management/delete_collection.html', {'collection': collection})
