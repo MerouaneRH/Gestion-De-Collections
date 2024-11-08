@@ -38,3 +38,15 @@ def delete_collection(request, collection_id):
         return redirect('collections_list') # Redirige vers la liste des collections après suppression 
     
     return render(request, 'collec_management/delete_collection.html', {'collection': collection})
+
+def edit_collection(request, collection_id):
+    collection = get_object_or_404(Collec, id=collection_id)
+    if request.method == 'POST':
+        form = CollecForm(request.POST, instance=collection)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(f"/collection/{collection.id}")
+    else:
+        form = CollecForm(instance=collection)
+
+    return render(request, 'collec_management/edit_collection.html', {'form': form})
