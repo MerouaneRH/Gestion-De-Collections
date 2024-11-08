@@ -37,3 +37,17 @@
 7. `c = Collec(title="test", description="Ceci est un test",date=timezone.now())`
 
 8. `c.save()`
+
+## Commandes Question 04:
+
+1. `python manage.py makemigrations`
+
+2. `python manage.py migrate`
+
+3. `python manage.py loaddata collec_management/fixtures/examples.json`
+
+4. `python manage.py shell`
+
+5. `from collec_management.models import Collec`
+
+6. `Collec.objects.all()`
