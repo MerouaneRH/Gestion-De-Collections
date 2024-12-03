@@ -113,3 +113,9 @@
 4. `python manage.py runserver 0.0.0.0:8000 &`
 
 ##  Note: l'ajout de la date est automatique même si les données sont ajoutées dans le shell .
+
+## Commandes question 11:
+
+1.  `python manage.py createsuperuser`
+
+2. `python manage.py runserver 0.0.0.0:8000 &`
