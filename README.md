@@ -119,3 +119,17 @@
 1.  `python manage.py createsuperuser`
 
 2. `python manage.py runserver 0.0.0.0:8000 &`
+
+3. `python manage.py makemigrations`
+
+4. `python manage.py migrate`
+
+## Commandes question 12:
+
+1.  `python manage.py createsuperuser`
+
+2. `python manage.py runserver 0.0.0.0:8000 &`
+
+3. `python manage.py makemigrations`
+
+4. `python manage.py migrate`
