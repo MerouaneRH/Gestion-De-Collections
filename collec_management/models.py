@@ -19,3 +19,8 @@ class Element(models.Model):
     collection=models.ForeignKey(
         Collec, on_delete=models.CASCADE
     )
+
+    def __str__(self):
+        return self.title
+    
+

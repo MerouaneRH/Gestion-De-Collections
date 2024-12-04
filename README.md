@@ -116,20 +116,22 @@
 
 ## Commandes question 11:
 
-1.  `python manage.py createsuperuser`
+1. `python manage.py makemigrations`
 
-2. `python manage.py runserver 0.0.0.0:8000 &`
+2. `python manage.py migrate`
 
-3. `python manage.py makemigrations`
+3. `python manage.py createsuperuser`
 
-4. `python manage.py migrate`
+4. `python manage.py runserver 0.0.0.0:8000 &`
 
 ## Commandes question 12:
 
-1.  `python manage.py createsuperuser`
+1. `python manage.py makemigrations`
 
-2. `python manage.py runserver 0.0.0.0:8000 &`
+2. `python manage.py migrate`
 
-3. `python manage.py makemigrations`
+3. `python manage.py dumpdata > collec_management/fixtures/examples.json`
 
-4. `python manage.py migrate`
+4. `python manage.py createsuperuser`
+
+5. `python manage.py runserver 0.0.0.0:8000 &`
