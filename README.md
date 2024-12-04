@@ -126,6 +126,8 @@
 
 ## Commandes question 12:
 
+## faire un `python manage.py loaddata collec_management/fixtures/examples.json` avant d'ajouter le modèle Element si ce n'est pas déjà fait
+
 1. `python manage.py makemigrations`
 
 2. `python manage.py migrate`
