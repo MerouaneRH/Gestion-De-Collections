@@ -3,6 +3,8 @@ from collec_management.models import Collec
 from collec_management.forms import CollecForm
 from django.http import HttpResponse, HttpResponseRedirect , Http404
 from django.utils import timezone
+from .models import Element
+from .forms import ElementForm
 
 # Create your views here.
 
@@ -53,3 +55,24 @@ def edit_collection(request, collection_id):
 
 def home(request):
     return render(request, 'collec_management/home.html')
+
+def add_element(request):
+    if request.method == 'POST':
+        form = ElementForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('element_list')
+    else:
+        form = ElementForm()
+    return render(request, 'collec_management/element_add.html', {'form': form})
+
+
+def delete_element(request, pk):
+    element = get_object_or_404(Element, pk=pk)
+    element.delete()
+
+    return redirect('element_list')  
+
+def element_list(request):
+    elements = Element.objects.all() 
+    return render(request, 'collec_management/element_list.html', {'elements': elements})

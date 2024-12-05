@@ -1,0 +1,44 @@
+{% extends './base.html' %}
+
+{% block title %}Liste des element{% endblock %}
+
+{% block content %}
+    <h1>Liste des éléments</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Valeur</th>
+                <th>Quantité</th>
+                <th>Date</th>
+                <th>Collection</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in elements %}
+                <tr>
+                    <td>{{ element.id }}</td>  
+                    <td>{{ element.title }}</td>
+                    <td>{{ element.description }}</td>
+                    <td>{{ element.value }}</td>
+                    <td>{{ element.quantity }}</td>
+                    <td>{{ element.date }}</td>
+                    <td>{{ element.collection.title }}</td>  
+                    <td>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="8">Aucun élément trouvé.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'collections_list' %}" class="btn btn-primary">Retour à la liste des collections</a>
+
+    {% endblock %}

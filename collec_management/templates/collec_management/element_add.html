@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+
+{% block title %}Ajout d'un element{% endblock %}
+
+{% block content %}
+<h1>Ajouter un nouvel élément</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Ajouter</button>
+</form>
+<a href="{% url 'collections_list' %}" class="btn btn-primary">Retour à la liste des collections</a>
+{% endblock %}

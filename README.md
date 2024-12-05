@@ -116,24 +116,31 @@
 
 ## Commandes question 11:
 
-1. `python manage.py makemigrations`
+1.  `python manage.py createsuperuser`
 
-2. `python manage.py migrate`
+2. `python manage.py runserver 0.0.0.0:8000 &`
 
-3. `python manage.py createsuperuser`
+3. `python manage.py makemigrations`
 
-4. `python manage.py runserver 0.0.0.0:8000 &`
+4. `python manage.py migrate`
 
 ## Commandes question 12:
 
-## faire un `python manage.py loaddata collec_management/fixtures/examples.json` avant d'ajouter le modèle Element si ce n'est pas déjà fait
+1.  `python manage.py createsuperuser`
 
-1. `python manage.py makemigrations`
+2. `python manage.py runserver 0.0.0.0:8000 &`
 
-2. `python manage.py migrate`
+3. `python manage.py makemigrations`
 
-3. `python manage.py dumpdata > collec_management/fixtures/examples.json`
+4. `python manage.py migrate`
 
-4. `python manage.py createsuperuser`
+## Commandes question 13:
+1.  `python manage.py loaddata collec_management/fixtures/examples.json`
 
-5. `python manage.py runserver 0.0.0.0:8000 &`
+2. `python manage.py makemigrations`
+
+3. `python manage.py migrate`
+
+## Commandes question 14:
+
+1. `python manage.py runserver 0.0.0.0:8000 &`
