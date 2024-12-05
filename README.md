@@ -133,3 +133,11 @@
 3. `python manage.py makemigrations`
 
 4. `python manage.py migrate`
+
+## Commandes question 13:
+1.  `python manage.py loaddata collec_management/fixtures/examples.json`
+
+2. `python manage.py makemigrations`
+
+3. `python manage.py migrate`
+
