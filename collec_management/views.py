@@ -61,7 +61,7 @@ def add_element(request):
         form = ElementForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('element_list')
+            return redirect('/')
     else:
         form = ElementForm()
     return render(request, 'collec_management/element_add.html', {'form': form})
@@ -69,10 +69,7 @@ def add_element(request):
 
 def delete_element(request, pk):
     element = get_object_or_404(Element, pk=pk)
-    element.delete()
-
-    return redirect('element_list')  
-
-def element_list(request):
-    elements = Element.objects.all() 
-    return render(request, 'collec_management/element_list.html', {'elements': elements})
+    if request.method == 'POST':
+        element.delete()
+        return redirect('/')
+    return render(request, 'collec_management/element_delete.html', {'element': element}) 

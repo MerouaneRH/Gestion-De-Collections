@@ -12,7 +12,6 @@ urlpatterns = [
     path('change/<int:collection_id>/', views.edit_collection,name='edit_collection'),
     path('element/add', views.add_element, name='add_element'),
     path('element/delete/<int:pk>/', views.delete_element, name='delete_element'),
-    path('elements/', views.element_list, name='element_list'),
 
 
 

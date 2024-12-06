@@ -4,17 +4,19 @@
 
 {% block content %}
     <title>Confirmer la suppression</title>
-</head>
-<body>
-    <h1>Êtes-vous sûr de vouloir supprimer cet élément ?</h1>
 
-    <p><strong>{{ element.title }}</strong></p>
-    <p>{{ element.description }}</p>
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="card shadow-sm p-4 col-md-8 col-lg-6">
+            <h2 class="card-title text-center text-danger mb-4">Supprimer un élément</h2>
+            <div class="card-body">
+                <p class="card-text text-center">Es-tu sûr de vouloir supprimer l'élément "<strong>{{ element.title }}</strong>" ? Cette action est irréversible.</p>
+                <form method="post" class="text-center">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+                    <a href="{% url 'home' %}" class="btn btn-secondary w-100 mt-3">Retour à l'accueil'</a>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Oui, supprimer</button>
-    </form>
-
-    <a href="{% url 'element_list' %}">Annuler</a>
     {% endblock %}
