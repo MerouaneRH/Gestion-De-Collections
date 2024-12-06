@@ -60,7 +60,9 @@ def add_element(request):
     if request.method == 'POST':
         form = ElementForm(request.POST)
         if form.is_valid():
-            form.save()
+            element=form.save(commit=False)
+            element.date=timezone.now()
+            element.save()
             return redirect('/')
     else:
         form = ElementForm()
