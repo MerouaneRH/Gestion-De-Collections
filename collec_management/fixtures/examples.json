@@ -1,1 +1,731 @@
-[{"model": "collec_management.collec", "pk": 1, "fields": {"title": "Collection de Timbres du Monde", "description": "Une collection de timbres rares provenant de différents pays, illustrant la culture et l'histoire de chaque nation.", "date": "2020-05-12"}}, {"model": "collec_management.collec", "pk": 2, "fields": {"title": "Classiques de la Littérature", "description": "Une collection de livres classiques, comprenant des œuvres de Shakespeare, Austen, et Hugo.", "date": "2018-08-20"}}, {"model": "collec_management.collec", "pk": 3, "fields": {"title": "Pièces de Monnaie Anciennes", "description": "Collection de pièces de monnaie anciennes, comprenant des monnaies romaines et grecques.", "date": "2019-03-15"}}, {"model": "collec_management.collec", "pk": 4, "fields": {"title": "Cartes Postales Vintage", "description": "Une collection de cartes postales vintage envoyées du début du 20ème siècle.", "date": "2021-01-25"}}, {"model": "collec_management.collec", "pk": 5, "fields": {"title": "Disques Vinyles des Années 70", "description": "Une collection de disques vinyles de musique classique des années 70, incluant des artistes comme Led Zeppelin et Pink Floyd.", "date": "2017-06-30"}}, {"model": "collec_management.collec", "pk": 6, "fields": {"title": "Figurines de Super-Héros", "description": "Collection de figurines de super-héros, y compris des personnages de Marvel et DC Comics.", "date": "2022-11-10"}}, {"model": "collec_management.collec", "pk": 7, "fields": {"title": "Sacs à Main de Designer", "description": "Une collection de sacs à main de créateurs célèbres tels que Chanel, Gucci, et Louis Vuitton.", "date": "2020-07-04"}}, {"model": "collec_management.collec", "pk": 8, "fields": {"title": "Montres de Luxe", "description": "Collection de montres de luxe, incluant des marques comme Rolex et Patek Philippe.", "date": "2023-02-14"}}, {"model": "collec_management.collec", "pk": 9, "fields": {"title": "Vins de Bordeaux", "description": "Une collection de vins de la région de Bordeaux, avec des crus de renommée mondiale.", "date": "2019-12-18"}}, {"model": "collec_management.collec", "pk": 10, "fields": {"title": "Peintures Impressionnistes", "description": "Une collection de reproductions d'œuvres impressionnistes célèbres, comprenant des peintures de Monet et Renoir.", "date": "2021-03-30"}}, {"model": "collec_management.collec", "pk": 11, "fields": {"title": "Classiques des Années 90", "description": "Collection de jeux vidéo classiques des années 90, incluant Super Mario et Sonic the Hedgehog.", "date": "2022-09-05"}}, {"model": "collec_management.collec", "pk": 12, "fields": {"title": "Plantes d'Intérieur", "description": "Une collection de plantes d'intérieur, comprenant des succulentes, des fougères et des cactus.", "date": "2020-04-22"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add collec", "content_type": 1, "codename": "add_collec"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change collec", "content_type": 1, "codename": "change_collec"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete collec", "content_type": 1, "codename": "delete_collec"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view collec", "content_type": 1, "codename": "view_collec"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add log entry", "content_type": 2, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change log entry", "content_type": 2, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete log entry", "content_type": 2, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view log entry", "content_type": 2, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add permission", "content_type": 3, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change permission", "content_type": 3, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete permission", "content_type": 3, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view permission", "content_type": 3, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add group", "content_type": 4, "codename": "add_group"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change group", "content_type": 4, "codename": "change_group"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete group", "content_type": 4, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view group", "content_type": 4, "codename": "view_group"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add user", "content_type": 5, "codename": "add_user"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change user", "content_type": 5, "codename": "change_user"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete user", "content_type": 5, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view user", "content_type": 5, "codename": "view_user"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add content type", "content_type": 6, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change content type", "content_type": 6, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete content type", "content_type": 6, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view content type", "content_type": 6, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add session", "content_type": 7, "codename": "add_session"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change session", "content_type": 7, "codename": "change_session"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete session", "content_type": 7, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view session", "content_type": 7, "codename": "view_session"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add session", "content_type": 8, "codename": "add_session"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change session", "content_type": 8, "codename": "change_session"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete session", "content_type": 8, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view session", "content_type": 8, "codename": "view_session"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "collec_management", "model": "collec"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "collec_management", "model": "element"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "sessions", "model": "session"}}]
+[{"model": "collec_management.collec", "pk": 1, "fields": {"title": "Collection de Timbres du Monde", "description": "Une collection de timbres rares provenant de différents pays, illustrant la culture et l'histoire de chaque nation.", "date": "2020-05-12"}}, {"model": "collec_management.collec", "pk": 2, "fields": {"title": "Classiques de la Littérature", "description": "Une collection de livres classiques, comprenant des œuvres de Shakespeare, Austen, et Hugo.", "date": "2018-08-20"}}, {"model": "collec_management.collec", "pk": 3, "fields": {"title": "Pièces de Monnaie Anciennes", "description": "Collection de pièces de monnaie anciennes, comprenant des monnaies romaines et grecques.", "date": "2019-03-15"}}, {"model": "collec_management.collec", "pk": 4, "fields": {"title": "Cartes Postales Vintage", "description": "Une collection de cartes postales vintage envoyées du début du 20ème siècle.", "date": "2021-01-25"}}, {"model": "collec_management.collec", "pk": 5, "fields": {"title": "Disques Vinyles des Années 70", "description": "Une collection de disques vinyles de musique classique des années 70, incluant des artistes comme Led Zeppelin et Pink Floyd.", "date": "2017-06-30"}}, {"model": "collec_management.collec", "pk": 6, "fields": {"title": "Figurines de Super-Héros", "description": "Collection de figurines de super-héros, y compris des personnages de Marvel et DC Comics.", "date": "2022-11-10"}}, {"model": "collec_management.collec", "pk": 7, "fields": {"title": "Sacs à Main de Designer", "description": "Une collection de sacs à main de créateurs célèbres tels que Chanel, Gucci, et Louis Vuitton.", "date": "2020-07-04"}}, {"model": "collec_management.collec", "pk": 8, "fields": {"title": "Montres de Luxe", "description": "Collection de montres de luxe, incluant des marques comme Rolex et Patek Philippe.", "date": "2023-02-14"}}, {"model": "collec_management.collec", "pk": 9, "fields": {"title": "Vins de Bordeaux", "description": "Une collection de vins de la région de Bordeaux, avec des crus de renommée mondiale.", "date": "2019-12-18"}}, {"model": "collec_management.collec", "pk": 10, "fields": {"title": "Peintures Impressionnistes", "description": "Une collection de reproductions d'œuvres impressionnistes célèbres, comprenant des peintures de Monet et Renoir.", "date": "2021-03-30"}}, {"model": "collec_management.collec", "pk": 11, "fields": {"title": "Classiques des Années 90", "description": "Collection de jeux vidéo classiques des années 90, incluant Super Mario et Sonic the Hedgehog.", "date": "2022-09-05"}}, {"model": "collec_management.collec", "pk": 12, "fields": {"title": "Plantes d'Intérieur", "description": "Une collection de plantes d'intérieur, comprenant des succulentes, des fougères et des cactus.", "date": "2020-04-22"}}, {"model": "collec_management.collec", "pk": 13, "fields": {"title": "test", "description": "Ceci est un test", "date": "2024-12-04"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add collec", "content_type": 1, "codename": "add_collec"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change collec", "content_type": 1, "codename": "change_collec"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete collec", "content_type": 1, "codename": "delete_collec"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view collec", "content_type": 1, "codename": "view_collec"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add log entry", "content_type": 2, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change log entry", "content_type": 2, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete log entry", "content_type": 2, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view log entry", "content_type": 2, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add permission", "content_type": 3, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change permission", "content_type": 3, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete permission", "content_type": 3, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view permission", "content_type": 3, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add group", "content_type": 4, "codename": "add_group"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change group", "content_type": 4, "codename": "change_group"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete group", "content_type": 4, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view group", "content_type": 4, "codename": "view_group"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add user", "content_type": 5, "codename": "add_user"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change user", "content_type": 5, "codename": "change_user"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete user", "content_type": 5, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view user", "content_type": 5, "codename": "view_user"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add content type", "content_type": 6, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change content type", "content_type": 6, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete content type", "content_type": 6, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view content type", "content_type": 6, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add session", "content_type": 7, "codename": "add_session"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change session", "content_type": 7, "codename": "change_session"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete session", "content_type": 7, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view session", "content_type": 7, "codename": "view_session"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add session", "content_type": 8, "codename": "add_session"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change session", "content_type": 8, "codename": "change_session"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete session", "content_type": 8, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view session", "content_type": 8, "codename": "view_session"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add element", "content_type": 2, "codename": "add_element"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change element", "content_type": 2, "codename": "change_element"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete element", "content_type": 2, "codename": "delete_element"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view element", "content_type": 2, "codename": "view_element"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add log entry", "content_type": 3, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change log entry", "content_type": 3, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete log entry", "content_type": 3, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view log entry", "content_type": 3, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add permission", "content_type": 4, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change permission", "content_type": 4, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete permission", "content_type": 4, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view permission", "content_type": 4, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add group", "content_type": 5, "codename": "add_group"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change group", "content_type": 5, "codename": "change_group"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete group", "content_type": 5, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view group", "content_type": 5, "codename": "view_group"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add user", "content_type": 6, "codename": "add_user"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change user", "content_type": 6, "codename": "change_user"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete user", "content_type": 6, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view user", "content_type": 6, "codename": "view_user"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add content type", "content_type": 7, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change content type", "content_type": 7, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete content type", "content_type": 7, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view content type", "content_type": 7, "codename": "view_contenttype"}}, {"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "collec_management", "model": "collec"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "collec_management", "model": "element"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "sessions", "model": "session"}},
+
+    {
+        "model": "collec_management.element",
+        "pk": 1,
+        "fields": {
+            "title": "Timbre rare du Canada",
+            "description": "Un timbre rare émis en 1920, illustrant une feuille d'érable.",
+            "value": 250,
+            "quantity": 10,
+            "date": "2020-05-12",
+            "collection": 1
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 2,
+        "fields": {
+            "title": "Timbre japonais",
+            "description": "Un timbre floral émis au Japon en 1980.",
+            "value": 100,
+            "quantity": 5,
+            "date": "2020-05-12",
+            "collection": 1
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 3,
+        "fields": {
+            "title": "Timbre soviétique",
+            "description": "Timbre de l'Union Soviétique, commémorant la révolution d'Octobre.",
+            "value": 350,
+            "quantity": 15,
+            "date": "2020-05-12",
+            "collection": 1
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 4,
+        "fields": {
+            "title": "Timbre britannique",
+            "description": "Un timbre émis en 1950 pour célébrer la reine Elizabeth II.",
+            "value": 200,
+            "quantity": 20,
+            "date": "2020-05-12",
+            "collection": 1
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 5,
+        "fields": {
+            "title": "Timbre australien",
+            "description": "Un timbre représentant des animaux d'Australie, émis en 1995.",
+            "value": 150,
+            "quantity": 12,
+            "date": "2020-05-12",
+            "collection": 1
+        }
+    },
+
+    {
+        "model": "collec_management.element",
+        "pk": 6,
+        "fields": {
+            "title": "Hamlet édition rare",
+            "description": "Une édition rare de Hamlet publiée en 1900.",
+            "value": 500,
+            "quantity": 2,
+            "date": "2020-05-12",
+            "collection": 2
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 7,
+        "fields": {
+            "title": "Les Misérables édition originale",
+            "description": "Une édition originale de 'Les Misérables' de Victor Hugo.",
+            "value": 700,
+            "quantity": 3,
+            "date": "2020-06-10",
+            "collection": 2
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 8,
+        "fields": {
+            "title": "1984 de George Orwell",
+            "description": "Une édition de 1984 de George Orwell avec couverture rigide.",
+            "value": 350,
+            "quantity": 4,
+            "date": "2020-06-10",
+            "collection": 2
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 9,
+        "fields": {
+            "title": "Pride and Prejudice de Jane Austen",
+            "description": "Une copie de 'Pride and Prejudice', premier tirage de 1813.",
+            "value": 600,
+            "quantity": 2,
+            "date": "2020-06-10",
+            "collection": 2
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 10,
+        "fields": {
+            "title": "Les Fleurs du Mal de Baudelaire",
+            "description": "Une édition des 'Fleurs du Mal' avec des illustrations rares.",
+            "value": 400,
+            "quantity": 5,
+            "date": "2020-06-10",
+            "collection": 2
+        }
+    },
+
+    {
+        "model": "collec_management.element",
+        "pk": 11,
+        "fields": {
+            "title": "Pièce romaine antique",
+            "description": "Pièce en bronze datant de l'Empire romain.",
+            "value": 1000,
+            "quantity": 1,
+            "date": "2020-06-10",
+            "collection": 3
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 12,
+        "fields": {
+            "title": "Pièce d'or grecque",
+            "description": "Pièce d'or de l'Empire grec ancien, datant de 300 av. J.-C.",
+            "value": 1500,
+            "quantity": 5,
+            "date": "2021-01-15",
+            "collection": 3
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 13,
+        "fields": {
+            "title": "Pièce de monnaie d'Égypte antique",
+            "description": "Pièce de monnaie en argent de l'Égypte antique.",
+            "value": 1200,
+            "quantity": 2,
+            "date": "2021-01-15",
+            "collection": 3
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 14,
+        "fields": {
+            "title": "Pièce romaine en argent",
+            "description": "Une pièce en argent de l'Empire romain.",
+            "value": 800,
+            "quantity": 7,
+            "date": "2021-01-15",
+            "collection": 3
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 15,
+        "fields": {
+            "title": "Monnaie de Constantin",
+            "description": "Pièce rare de l'empereur Constantin.",
+            "value": 1300,
+            "quantity": 3,
+            "date": "2021-01-15",
+            "collection": 3
+        }
+    },
+
+    {
+        "model": "collec_management.element",
+        "pk": 16,
+        "fields": {
+            "title": "Carte postale vintage Paris",
+            "description": "Carte postale vintage de Paris envoyée en 1925.",
+            "value": 50,
+            "quantity": 15,
+            "date": "2021-01-15",
+            "collection": 4
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 17,
+        "fields": {
+            "title": "Carte postale vintage Londres",
+            "description": "Carte postale vintage envoyée de Londres en 1918.",
+            "value": 60,
+            "quantity": 10,
+            "date": "2021-08-20",
+            "collection": 4
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 18,
+        "fields": {
+            "title": "Carte postale vintage New York",
+            "description": "Carte postale de New York envoyée en 1930.",
+            "value": 55,
+            "quantity": 8,
+            "date": "2021-08-20",
+            "collection": 4
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 19,
+        "fields": {
+            "title": "Carte postale vintage Berlin",
+            "description": "Carte postale vintage de Berlin, datée de 1920.",
+            "value": 40,
+            "quantity": 12,
+            "date": "2021-08-20",
+            "collection": 4
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 20,
+        "fields": {
+            "title": "Carte postale vintage Rome",
+            "description": "Carte postale vintage de Rome, envoyée en 1915.",
+            "value": 45,
+            "quantity": 18,
+            "date": "2021-08-20",
+            "collection": 4
+        }
+    },
+
+    {
+        "model": "collec_management.element",
+        "pk": 21,
+        "fields": {
+            "title": "Vinyle Led Zeppelin",
+            "description": "Disque vinyle de Led Zeppelin, édition originale de 1970.",
+            "value": 300,
+            "quantity": 5,
+            "date": "2021-08-20",
+            "collection": 5
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 22,
+        "fields": {
+            "title": "Vinyle The Beatles",
+            "description": "Vinyle des Beatles, premier album sorti en 1963.",
+            "value": 250,
+            "quantity": 6,
+            "date": "2021-08-20",
+            "collection": 5
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 23,
+        "fields": {
+            "title": "Vinyle Pink Floyd",
+            "description": "Vinyle de Pink Floyd, album 'The Dark Side of the Moon' (1973).",
+            "value": 400,
+            "quantity": 3,
+            "date": "2022-03-05",
+            "collection": 5
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 24,
+        "fields": {
+            "title": "Vinyle David Bowie",
+            "description": "Disque vinyle de David Bowie, 'Ziggy Stardust'.",
+            "value": 350,
+            "quantity": 8,
+            "date": "2022-03-05",
+            "collection": 5
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 25,
+        "fields": {
+            "title": "Vinyle The Rolling Stones",
+            "description": "Vinyle des Rolling Stones, 'Exile on Main St.' (1972).",
+            "value": 280,
+            "quantity": 7,
+            "date": "2022-03-05",
+            "collection": 5
+        }
+    },
+
+    {
+        "model": "collec_management.element",
+        "pk": 26,
+        "fields": {
+            "title": "Objet antique chinois",
+            "description": "Objet en jade antique chinois datant de la dynastie Ming.",
+            "value": 1200,
+            "quantity": 1,
+            "date": "2022-03-05",
+            "collection": 6
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 27,
+        "fields": {
+            "title": "Porcelaine de Chine",
+            "description": "Vase en porcelaine chinoise de la dynastie Qing.",
+            "value": 2000,
+            "quantity": 3,
+            "date": "2022-03-05",
+            "collection": 6
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 28,
+        "fields": {
+            "title": "Cerf de jade",
+            "description": "Statue en jade d'un cerf, fabriqué en Chine ancienne.",
+            "value": 1500,
+            "quantity": 2,
+            "date": "2022-03-05",
+            "collection": 6
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 29,
+        "fields": {
+            "title": "Artisanat chinois",
+            "description": "Objet en bronze, artefact antique chinois.",
+            "value": 1100,
+            "quantity": 6,
+            "date": "2022-03-05",
+            "collection": 6
+        }
+    },
+    {
+        "model": "collec_management.element",
+        "pk": 30,
+        "fields": {
+            "title": "Porcelaine antique",
+            "description": "Plat en porcelaine ancienne de Chine.",
+            "value": 1800,
+            "quantity": 4,
+            "date": "2022-03-05",
+            "collection": 6
+        }
+    },
+    
+        {
+            "model": "collec_management.element",
+            "pk": 31,
+            "fields": {
+                "title": "Sac à Main Chanel",
+                "description": "Un sac à main Chanel de collection, édition limitée.",
+                "value": 5000,
+                "quantity": 1,
+                "date": "2022-03-05",
+                "collection": 7
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 32,
+            "fields": {
+                "title": "Sac à Main Louis Vuitton",
+                "description": "Un sac Louis Vuitton en cuir d'agneau.",
+                "value": 1200,
+                "quantity": 2,
+                "date": "2022-03-05",
+                "collection": 7
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 33,
+            "fields": {
+                "title": "Sac à Main Gucci",
+                "description": "Sac à main Gucci en toile monogrammée.",
+                "value": 1500,
+                "quantity": 3,
+                "date": "2023-07-18",
+                "collection": 7
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 34,
+            "fields": {
+                "title": "Sac à Main Prada",
+                "description": "Sac Prada en cuir de veau, édition limitée.",
+                "value": 2500,
+                "quantity": 2,
+                "date": "2023-07-18",
+                "collection": 7
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 35,
+            "fields": {
+                "title": "Sac à Main Fendi",
+                "description": "Sac à main Fendi en toile jacquard.",
+                "value": 1900,
+                "quantity": 1,
+                "date": "2023-07-18",
+                "collection": 7
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 36,
+            "fields": {
+                "title": "Montre Rolex Submariner",
+                "description": "Montre Rolex Submariner en acier inoxydable.",
+                "value": 8500,
+                "quantity": 1,
+                "date": "2023-07-18",
+                "collection": 8
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 37,
+            "fields": {
+                "title": "Montre Patek Philippe",
+                "description": "Montre Patek Philippe Calatrava en or rose.",
+                "value": 22000,
+                "quantity": 1,
+                "date": "2023-07-18",
+                "collection": 8
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 38,
+            "fields": {
+                "title": "Montre Audemars Piguet",
+                "description": "Montre Audemars Piguet Royal Oak en acier inoxydable.",
+                "value": 25000,
+                "quantity": 1,
+                "date": "2023-07-18",
+                "collection": 8
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 39,
+            "fields": {
+                "title": "Montre Omega Seamaster",
+                "description": "Montre Omega Seamaster en acier inoxydable.",
+                "value": 4500,
+                "quantity": 2,
+                "date": "2023-07-18",
+                "collection": 8
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 40,
+            "fields": {
+                "title": "Montre TAG Heuer Monaco",
+                "description": "Montre TAG Heuer Monaco édition limitée.",
+                "value": 3500,
+                "quantity": 1,
+                "date": "2023-07-18",
+                "collection": 8
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 41,
+            "fields": {
+                "title": "Vin de Bordeaux Château Margaux",
+                "description": "Vin de Bordeaux prestigieux, millésime 2015.",
+                "value": 1500,
+                "quantity": 2,
+                "date": "2023-07-18",
+                "collection": 9
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 42,
+            "fields": {
+                "title": "Vin de Bordeaux Château Lafite Rothschild",
+                "description": "Vin de Bordeaux rare, millésime 2014.",
+                "value": 3000,
+                "quantity": 1,
+                "date": "2023-07-18",
+                "collection": 9
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 43,
+            "fields": {
+                "title": "Vin de Bordeaux Château Latour",
+                "description": "Vin de Bordeaux haut de gamme, millésime 2016.",
+                "value": 2500,
+                "quantity": 2,
+                "date": "2023-07-18",
+                "collection": 9
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 44,
+            "fields": {
+                "title": "Vin de Bordeaux Château Cheval Blanc",
+                "description": "Vin de Bordeaux réputé, millésime 2017.",
+                "value": 2000,
+                "quantity": 3,
+                "date": "2023-02-10",
+                "collection": 9
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 45,
+            "fields": {
+                "title": "Vin de Bordeaux Château Mouton Rothschild",
+                "description": "Vin de Bordeaux de prestige, millésime 2018.",
+                "value": 3500,
+                "quantity": 1,
+                "date": "2023-02-10",
+                "collection": 9
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 46,
+            "fields": {
+                "title": "Peinture de Monet",
+                "description": "Reproduction d'une œuvre célèbre de Claude Monet, 'Impression, Soleil Levant'.",
+                "value": 500,
+                "quantity": 1,
+                "date": "2023-02-10",
+                "collection": 10
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 47,
+            "fields": {
+                "title": "Peinture de Renoir",
+                "description": "Reproduction de l'œuvre 'Le Bal du Moulin de la Galette' de Pierre-Auguste Renoir.",
+                "value": 600,
+                "quantity": 1,
+                "date": "2023-02-10",
+                "collection": 10
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 48,
+            "fields": {
+                "title": "Peinture de Van Gogh",
+                "description": "Reproduction de l'œuvre 'La Nuit étoilée' de Vincent Van Gogh.",
+                "value": 750,
+                "quantity": 1,
+                "date": "2023-02-10",
+                "collection": 10
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 49,
+            "fields": {
+                "title": "Peinture de Cézanne",
+                "description": "Reproduction de l'œuvre 'Les Grandes Baigneuses' de Paul Cézanne.",
+                "value": 800,
+                "quantity": 1,
+                "date": "2023-02-10",
+                "collection": 10
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 50,
+            "fields": {
+                "title": "Peinture de Degas",
+                "description": "Reproduction de l'œuvre 'La Classe de Danse' de Edgar Degas.",
+                "value": 650,
+                "quantity": 1,
+                "date": "2023-02-10",
+                "collection": 10
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 51,
+            "fields": {
+                "title": "Jeu de société Monopoly",
+                "description": "Edition collector du Monopoly, boîte en métal.",
+                "value": 200,
+                "quantity": 2,
+                "date": "2023-02-10",
+                "collection": 11
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 52,
+            "fields": {
+                "title": "Jeu de société Risk",
+                "description": "Jeu de société Risk, édition anniversaire.",
+                "value": 150,
+                "quantity": 3,
+                "date": "2023-02-10",
+                "collection": 11
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 53,
+            "fields": {
+                "title": "Jeu de société Cluedo",
+                "description": "Cluedo, version vintage avec pièces en métal.",
+                "value": 100,
+                "quantity": 1,
+                "date": "2022-11-07",
+                "collection": 11
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 54,
+            "fields": {
+                "title": "Jeu de société Scrabble",
+                "description": "Edition rare du Scrabble, avec lettres en bois sculpté.",
+                "value": 120,
+                "quantity": 2,
+                "date": "2022-11-07",
+                "collection": 11
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 55,
+            "fields": {
+                "title": "Jeu de société Trivial Pursuit",
+                "description": "Edition collector de Trivial Pursuit avec questions des années 80.",
+                "value": 110,
+                "quantity": 2,
+                "date": "2022-11-07",
+                "collection": 11
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 56,
+            "fields": {
+                "title": "Couteau de collection Laguiole",
+                "description": "Couteau Laguiole en bois d'olivier avec étui en cuir.",
+                "value": 300,
+                "quantity": 1,
+                "date": "2022-11-07",
+                "collection": 12
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 57,
+            "fields": {
+                "title": "Couteau de collection Opinel",
+                "description": "Couteau Opinel vintage en bois de hêtre.",
+                "value": 50,
+                "quantity": 2,
+                "date": "2022-11-07",
+                "collection": 12
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 58,
+            "fields": {
+                "title": "Couteau de collection Puma",
+                "description": "Couteau Puma en acier inoxydable avec poignée en cuir.",
+                "value": 150,
+                "quantity": 3,
+                "date": "2022-11-07",
+                "collection": 12
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 59,
+            "fields": {
+                "title": "Couteau de collection Buck",
+                "description": "Couteau Buck en acier damassé avec étui en cuir.",
+                "value": 250,
+                "quantity": 2,
+                "date": "2022-11-07",
+                "collection": 12
+            }
+        },
+        {
+            "model": "collec_management.element",
+            "pk": 60,
+            "fields": {
+                "title": "Couteau de collection Spyderco",
+                "description": "Couteau Spyderco en titane, édition limitée.",
+                "value": 450,
+                "quantity": 1,
+                "date": "2022-11-07",
+                "collection": 12
+            }
+        }
+    
+    
+]
