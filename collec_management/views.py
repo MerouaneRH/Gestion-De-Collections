@@ -12,8 +12,28 @@ def about(request):
     return render(request,"collec_management/about.html")
 
 def collections_details(request, collection_id):
+    # Récupérer la collection par son ID
     collection = get_object_or_404(Collec, pk=collection_id)
-    return render(request, 'collec_management/collections_details.html', {'collection': collection})
+    
+    # Récupérer les éléments associés à cette collection
+    elements = Element.objects.filter(collection=collection)
+    
+    if request.method == 'POST':
+        form = ElementForm(request.POST)
+        if form.is_valid():
+            element = form.save(commit=False)
+            element.collection = collection
+            element.date=timezone.now()
+            element.save()
+            return redirect('collections_details', collection_id=collection.id)
+    else:
+        form = ElementForm(initial={'collection': collection.pk})
+    
+    return render(request, 'collec_management/collections_details.html', {
+        'collection': collection,
+        'elements': elements,
+        'form': form
+    })
 
 def collections_list(request):
     collections = Collec.objects.all().order_by('-date')
@@ -63,7 +83,7 @@ def add_element(request):
             element=form.save(commit=False)
             element.date=timezone.now()
             element.save()
-            return redirect('/')
+            return HttpResponseRedirect(f"/collection/{element.collection.pk}")
     else:
         form = ElementForm()
     return render(request, 'collec_management/element_add.html', {'form': form})
@@ -73,7 +93,8 @@ def delete_element(request, pk):
     element = get_object_or_404(Element, pk=pk)
     if request.method == 'POST':
         element.delete()
-        return redirect('/')
+        
+        return HttpResponseRedirect(f"/collection/{element.collection.pk}")
     return render(request, 'collec_management/element_delete.html', {'element': element}) 
 
 def element_details(request, pk):

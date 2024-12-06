@@ -12,6 +12,6 @@
             <button type="submit" class="btn btn-success">Sauvegarder les modifications</button>
         </form>
 
-        <a href="{% url 'element_details' pk=element.pk %}" class="btn btn-secondary mt-3">Annuler</a>
+        <a href="{% url 'collections_details' collection_id=element.collection.id %}" class="btn btn-secondary mt-3">Annuler</a>
     </div>
 {% endblock %}

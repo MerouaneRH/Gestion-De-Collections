@@ -13,7 +13,7 @@
                 <form method="post" class="text-center">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
-                    <a href="{% url 'home' %}" class="btn btn-secondary w-100 mt-3">Retour à l'accueil'</a>
+                    <a href="{% url 'collections_details' collection_id=element.collection.id %}" class="btn btn-secondary w-100 mt-3">Annuler</a>
                 </form>
             </div>
         </div>
