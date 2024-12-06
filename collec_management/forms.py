@@ -20,4 +20,4 @@ class CollecForm(ModelForm):
 class ElementForm(forms.ModelForm):
     class Meta:
         model = Element
-        fields = ['title', 'description', 'value', 'quantity', 'date', 'collection']
+        fields = ['title', 'description', 'value', 'quantity',  'collection']
