@@ -12,7 +12,7 @@ urlpatterns = [
     path('change/<int:collection_id>/', views.edit_collection,name='edit_collection'),
     path('element/add', views.add_element, name='add_element'),
     path('element/delete/<int:pk>/', views.delete_element, name='delete_element'),
-
-
+    path('element/<int:pk>/', views.element_details, name='element_details'),
+    path('element/edit/<int:pk>/', views.edit_element, name='edit_element'),
 
 ]

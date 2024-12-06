@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+
+{% block title %}Détails de l'élément - {{ element.title }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Détails de l'élément : {{ element.title }}</h1>
+        
+        <table class="table">
+            <tr>
+                <th>Nom</th>
+                <td>{{ element.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ element.description }}</td>
+            </tr>
+            <tr>
+                <th>Valeur</th>
+                <td>{{ element.value }}</td>
+            </tr>
+            <tr>
+                <th>Quantité</th>
+                <td>{{ element.quantity }}</td>
+            </tr>
+            <tr>
+                <th>Date d'ajout</th>
+                <td>{{ element.date }}</td>
+            </tr>
+            <tr>
+                <th>Collection</th>
+                <td>{{ element.collection.title }}</td>
+            </tr>
+        </table>
+        
+        <a href="{% url 'collections_details' collection_id=element.collection.id %}" class="btn btn-primary">Retour à la collection</a>
+    </div>
+{% endblock %}

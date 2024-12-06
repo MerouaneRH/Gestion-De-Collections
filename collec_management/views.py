@@ -75,3 +75,20 @@ def delete_element(request, pk):
         element.delete()
         return redirect('/')
     return render(request, 'collec_management/element_delete.html', {'element': element}) 
+
+def element_details(request, pk):
+    element = get_object_or_404(Element, pk=pk)
+    return render(request, 'collec_management/element_details.html', {'element': element})
+
+def edit_element(request, pk):
+    element = get_object_or_404(Element, pk=pk)
+
+    if request.method == 'POST':
+        form = ElementForm(request.POST, instance=element)
+        if form.is_valid():
+            form.save()
+            return redirect('element_details', pk=element.pk)
+    else:
+        form = ElementForm(instance=element)
+
+    return render(request, 'collec_management/element_edit.html', {'form': form, 'element': element})
