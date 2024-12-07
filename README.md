@@ -157,7 +157,7 @@
 
 4. `python manage.py runserver 0.0.0.0:8000 &`
 
-## Commandes question 17:
+## Commandes question 16:
 
 1. `python manage.py makemigrations`
 
@@ -167,7 +167,7 @@
 
 4. `python manage.py runserver 0.0.0.0:8000 &`
 
-## Commandes question 16:
+## Commandes question 17:
 
 1. `python manage.py makemigrations`
 
