@@ -14,5 +14,7 @@ urlpatterns = [
     path('element/delete/<int:pk>/', views.delete_element, name='delete_element'),
     path('element/<int:pk>/', views.element_details, name='element_details'),
     path('element/edit/<int:pk>/', views.edit_element, name='edit_element'),
-
+    # Authentification
+    path('accounts/login/', views.custom_login, name='login'),  # Custom login view
+    path('accounts/logout/', views.custom_logout, name='logout'),  # Custom logout view
 ]

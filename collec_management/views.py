@@ -5,6 +5,10 @@ from django.http import HttpResponse, HttpResponseRedirect , Http404
 from django.utils import timezone
 from .models import Element
 from .forms import ElementForm
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -34,11 +38,12 @@ def collections_details(request, collection_id):
         'elements': elements,
         'form': form
     })
-
+@login_required
 def collections_list(request):
     collections = Collec.objects.all().order_by('-date')
     return render(request, 'collec_management/collections_list.html', {'collections': collections})
 
+@login_required
 def new_collection(request):
     if request.method == "POST":
         form = CollecForm(request.POST)
@@ -113,3 +118,21 @@ def edit_element(request, pk):
         form = ElementForm(instance=element)
 
     return render(request, 'collec_management/element_edit.html', {'form': form, 'element': element})
+
+def custom_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, "Connexion réussie.")
+            return redirect('home')
+        else:
+            messages.error(request, "Nom d'utilisateur ou mot de passe incorrect.")
+    return render(request, 'collec_management/login.html')
+
+def custom_logout(request):
+    logout(request)
+    messages.success(request, "Déconnexion réussie.")
+    return redirect('home')

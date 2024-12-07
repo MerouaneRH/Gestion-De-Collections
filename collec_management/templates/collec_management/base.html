@@ -39,6 +39,19 @@
                         <button type="button" class="btn btn-outline-dark mx-2">À propos</button>
                     </a>
                 </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}">
+                        <button type="button" class="btn btn-outline-danger mx-2">Se déconnecter</button>
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'login' %}">
+                        <button type="button" class="btn btn-outline-success mx-2">Se connecter</button>
+                    </a>
+                </li>
+            {% endif %}
             </ul>
         </div>
     </div>
