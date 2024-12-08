@@ -183,22 +183,24 @@
 
 2. `python manage.py migrate`
 
-3. `python manage.py createsuperuser`
+3. `python manage.py loaddata collec_management/fixtures/examples.json`
 
-4. `python manage.py shell`
+4. `python manage.py createsuperuser`
 
-5. `from django.contrib.auth.models import User`
+5. `python manage.py runserver 0.0.0.0:8000`
 
-6. `user = User.objects.create_user('nouvel_utilisateur', password='test1234')`
+6. `python manage.py shell`
 
-7. `print(user)`
+7. `from django.contrib.auth.models import User`
 
-8. `print(User.objects.all())`
+8. `user = User.objects.create_user('nouvel_utilisateur', password='test1234')`
 
-9. `python manage.py makemigrations`
+9. `print(user)`
 
-10. `python manage.py migrate`
+10. `print(User.objects.all())`
 
-11. `python manage.py loaddata collec_management/fixtures/examples.json`
+11. `quit()`
 
-12. `python manage.py runserver 0.0.0.0:8000`
+12. `python manage.py migrate`
+
+13. `python manage.py runserver 0.0.0.0:8000`
