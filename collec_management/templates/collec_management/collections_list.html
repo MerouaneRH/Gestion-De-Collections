@@ -10,7 +10,10 @@
                 <th >Titre</th>
                 <th>Date de Création</th>
                 <th>Détails</th>
+                {% if user.is_authenticated %}
                 <th>Actions</th>
+                {% endif %}            
+
             </tr>
         </thead>
         <tbody>
@@ -19,10 +22,12 @@
                 <td>{{ collection.title }}</td>
                 <td>{{ collection.date }}</td>
                 <td><a class="btn btn-primary btn-sm" href="{% url 'collections_details' collection.id %}">Voir plus de détails</a></td>
+                {% if user.is_authenticated %}
                 <td>
-                    <a class="btn btn-danger btn-sm" href="{% url 'delete_collection' collection.id %}">Supprimer</a>
                     <a class="btn btn-warning btn-sm" href="{% url 'edit_collection' collection.id %}">Modifier</a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'delete_collection' collection.id %}">Supprimer</a>
                 </td>
+            {% endif %}            
             </tr>
             {% endfor %}
         </tbody>

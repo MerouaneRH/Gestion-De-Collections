@@ -177,3 +177,28 @@
 
 4. `python manage.py runserver 0.0.0.0:8000`
 
+## Commandes question 18:
+
+1. `python manage.py makemigrations`
+
+2. `python manage.py migrate`
+
+3. `python manage.py createsuperuser`
+
+4. `python manage.py shell`
+
+5. `from django.contrib.auth.models import User`
+
+6. `user = User.objects.create_user('nouvel_utilisateur', password='test1234')`
+
+7. `print(user)`
+
+8. `print(User.objects.all())`
+
+9. `python manage.py makemigrations`
+
+10. `python manage.py migrate`
+
+11. `python manage.py loaddata collec_management/fixtures/examples.json`
+
+12. `python manage.py runserver 0.0.0.0:8000`

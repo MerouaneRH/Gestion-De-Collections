@@ -11,12 +11,28 @@
             <p class="card-text"><strong>Description :</strong> {{ collection.description }}</p>
             <p class="card-text"><strong>Date de Création :</strong> {{ collection.date }}</p>
         </div>
-
         <!-- Formulaire pour ajouter un nouvel élément -->
         <h3 class="mt-4">Ajouter un nouvel élément</h3>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            <div class="mb-3">
+                <label for="{{ form.title.id_for_label }}" class="form-label">Titre</label>
+                {{ form.title }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.description.id_for_label }}" class="form-label">Description</label>
+                {{ form.description }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.value.id_for_label }}" class="form-label">Valeur</label>
+                {{ form.value }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.quantity.id_for_label }}" class="form-label">Quantité</label>
+                {{ form.quantity }}
+            </div>
+            <!-- Champ collection masqué -->
+            <input type="hidden" name="collection" value="{{ collection.id }}">
             <button type="submit" class="btn btn-success">Ajouter l'élément</button>
         </form>
 
@@ -35,27 +51,28 @@
             </thead>
             <tbody>
                 {% for element in elements %}
-                    <tr>
-                        <td>{{ element.title }}</td>
-                        <td>{{ element.description }}</td>
-                        <td>{{ element.value }}</td>
-                        <td>{{ element.quantity }}</td>
-                        <td>
-                            <a href="{% url 'element_details' pk=element.pk %}" class="btn btn-info">Détails</a>
-                            <a href="{% url 'edit_element' pk=element.pk %}" class="btn btn-warning">Modifier</a>
-                            <a href="{% url 'delete_element' pk=element.pk %}" class="btn btn-danger">Supprimer</a>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>{{ element.title }}</td>
+                    <td>{{ element.description }}</td>
+                    <td>{{ element.value }}</td>
+                    <td>{{ element.quantity }}</td>
+                    <td>
+                        <a href="{% url 'element_details' pk=element.pk %}" class="btn btn-info">Détails</a>
+                        <a href="{% url 'edit_element' pk=element.pk %}" class="btn btn-warning">Modifier</a>
+                        <a href="{% url 'delete_element' pk=element.pk %}" class="btn btn-danger">Supprimer</a>
+                    </td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
         {% else %}
-            <p>Aucun élément n'a été ajouté à cette collection pour le moment.</p>
+        <p>Aucun élément n'a été ajouté à cette collection pour le moment.</p>
         {% endif %}
 
         <!-- Bouton de retour à la liste des collections -->
         <div class="text-center mt-3">
-            <a href="{% url 'collections_list' %}" class="btn btn-secondary w-100 mt-3">Retour à la liste des collections</a>
+            <a href="{% url 'collections_list' %}" class="btn btn-secondary w-100 mt-3">Retour à la liste des
+                collections</a>
         </div>
     </div>
 </div>
