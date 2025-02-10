@@ -1,206 +1,80 @@
-# Noms et Prénoms avec adresses mails des membres du groupe:
-- TOUBAL Rabah : rabah.toubal@etu.univ-orleans.fr
-- GUILLARD Joan: joan.guillard@etu.univ-orleans.fr
-- HAMZE Muhamad: muhamad.hamze@etu.univ-orleans.fr
-- RAHMOUN Merouane: merouane.rahmoun@etu.univ-orleans.fr
+# Gestion de Collections et d'Éléments 🗂️
 
-## Commandes Question 01:
+Ce projet est une application web développée avec **Django** pour la gestion de collections et des éléments qui y sont rattachés. Il permet de consulter, ajouter, modifier et supprimer des collections et des éléments, avec des fonctionnalités d'authentification et de gestion des autorisations.
 
-1. `USERNAME=$(basename $(id -un) @campus.univ-orleans.fr) USERID=$(id -u) docker-compose up -d`
+---
 
-2. `docker exec -ti fw1-cc-votre_nom_utilisateur whoami`
+## Fonctionnalités 🚀
 
-3. `django-admin startproject cc`
+- **Gestion des Collections** : Ajout, modification, suppression et consultation des collections.
+- **Gestion des Éléments** : Ajout, modification, suppression et consultation des éléments rattachés aux collections.
+- **Authentification** : Connexion et déconnexion des utilisateurs.
+- **Gestion des Autorisations** :
+  - Les utilisateurs ne peuvent accéder qu'aux collections et éléments qu'ils ont créés.
+  - Les utilisateurs non authentifiés ne peuvent que consulter la liste des collections.
+- **Interface Utilisateur** : Améliorée avec **Bootstrap** pour une meilleure expérience utilisateur.
 
-4. `python manage.py startapp collec_management`
+---
 
-5. `python manage.py runserver 0.0.0.0:8000 &`
+## Structure du Projet 🗂️
 
-## Commandes Question 02:
+- **cc** : Projet Django principal.
+- **collec_management** : Application Django pour la gestion des collections et des éléments.
+- **README.md** : Fichier contenant les informations sur le projet et les commandes utilisées.
+- **cc/**, **collec_management/**, **manage.py** : Structure de base du projet Django.
 
-1. `python manage.py runserver 0.0.0.0:8000 &`
+---
 
-## Commandes Question 03:
+## Installation et Utilisation 🛠️
 
-1. `python manage.py makemigrations`
+### Prérequis
 
-2. `python manage.py sqlmigrate collec_management 0001`
+- **Python**
+- **Django**
+- **Docker**
 
-3.  `python manage.py migrate`
+### Commandes Utiles
 
-4. `python manage.py shell`
+1. **Lancer le conteneur Docker** :
+   ```bash
+   USERNAME=$(id -un) USERID=$(id -u) docker-compose up -d
+   ```
 
-5. `from collec_management.models import Collec`
+2. **Vérifier l'utilisateur dans le conteneur** :
+   ```bash
+   docker exec -ti fw1-cc-votre_nom_utilisateur whoami
+   ```
 
-6. `from django.utils import timezone`
+3. **Créer les migrations** :
+   ```bash
+   python manage.py makemigrations
+   ```
 
-7. `c = Collec(title="test", description="Ceci est un test",date=timezone.now())`
+4. **Appliquer les migrations** :
+   ```bash
+   python manage.py migrate
+   ```
 
-8. `c.save()`
+5. **Charger les données des collections** :
+   ```bash
+   python manage.py loaddata collec_management/fixtures/examples.json
+   ```
 
-## Commandes Question 04:
+6. **Lancer le serveur Django** :
+   ```bash
+   python manage.py runserver 0.0.0.0:8000
+   ```
 
-1. `python manage.py makemigrations`
+---
 
-2. `python manage.py migrate`
+## Équipe 👥
 
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
+- **GUILLARD Joan**
+- **HAMZE Muhamad**
+- **TOUBAL Rabah**
+- **RAHMOUN Merouane**
 
-4. `python manage.py shell`
 
-5. `from collec_management.models import Collec`
+---
 
-6. `Collec.objects.all()`
-
-## Commandes Question 05:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes Question 06:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes Question 07:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes Question 08:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes Question 09:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes Question 10:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-##  Note: l'ajout de la date est automatique même si les données sont ajoutées dans le shell .
-
-## Commandes question 11:
-
-1.  `python manage.py createsuperuser`
-
-2. `python manage.py runserver 0.0.0.0:8000 &`
-
-3. `python manage.py makemigrations`
-
-4. `python manage.py migrate`
-
-## Commandes question 12:
-
-1.  `python manage.py createsuperuser`
-
-2. `python manage.py runserver 0.0.0.0:8000 &`
-
-3. `python manage.py makemigrations`
-
-4. `python manage.py migrate`
-
-
-## Commandes question 13:
-1.  `python manage.py loaddata collec_management/fixtures/examples.json`
-
-2. `python manage.py makemigrations`
-
-3. `python manage.py migrate`
-
-
-## Commandes question 14:
-
-1. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes question 15:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes question 16:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000 &`
-
-## Commandes question 17:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py runserver 0.0.0.0:8000`
-
-## Commandes question 18:
-
-1. `python manage.py makemigrations`
-
-2. `python manage.py migrate`
-
-3. `python manage.py loaddata collec_management/fixtures/examples.json`
-
-4. `python manage.py createsuperuser`
-
-5. `python manage.py runserver 0.0.0.0:8000`
-
-6. `python manage.py shell`
-
-7. `from django.contrib.auth.models import User`
-
-8. `user = User.objects.create_user('nouvel_utilisateur', password='test1234')`
-
-9. `print(user)`
-
-10. `print(User.objects.all())`
-
-11. `quit()`
-
-12. `python manage.py migrate`
-
-13. `python manage.py runserver 0.0.0.0:8000`
+Ce projet a été réalisé dans le cadre du cours **Framework Web 1** à l'**Université d'Orléans**.
